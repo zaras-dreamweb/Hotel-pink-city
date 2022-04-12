@@ -5,14 +5,37 @@ import { Link } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { Form } from 'react-bootstrap';
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+
+
+
+
 
 const SignUp = () => {
+    const [user, setUser] = useState({})
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [createUserWithEmailAndPassword, user, loading, error,] = useCreateUserWithEmailAndPassword(auth);
+    const [createUserWithEmailAndPassword, user2, loading, error,] = useCreateUserWithEmailAndPassword(auth);
+
+    // google authentication
+    const googleProvider = new GoogleAuthProvider();
+
+    const googleAuth = (event) => {
+        event.preventDefault();
+        signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                const user = result.user;
+                setUser(user);
+                console.log(user);
+            }).catch((error) => {
+                const errorMessage = error.message;
+                console.log(errorMessage);
+            });
+    }
 
 
+    // email authentication
     const handleEmailBlur = (event) => {
         setEmail(event.target.value);
         setEmail('');
@@ -63,7 +86,7 @@ const SignUp = () => {
                     <p>or</p>
                     <hr className='border-gray-400 h-px w-full ml-2' />
                 </div>
-                <button className='google-btn'>Continue with Google</button>
+                <button onClick={googleAuth} className='google-btn'>Continue with Google</button>
             </Form>
         </div>
     );
