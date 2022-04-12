@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "name": "Suites",
+        "price": 300,
+        "image": "https://cdn.fodors.com/ee/files/slideshows/The-Yeatman.jpg",
+        "rating": 4.5
+    },
+    {
+        "id": "3",
+        "name": "Couple Rooms",
+        "price": 200,
+        "image": "https://i.pinimg.com/originals/c9/a4/18/c9a418a24604355ba0e9b20b358e982c.jpg",
+        "rating": 4.5
+    },
+    {
+        "id": "6",
+        "name": "HoneyMoon Rooms",
+        "price": 300,
+        "image": "https://d27k8xmh3cuzik.cloudfront.net/wp-content/uploads/2017/03/rsz_cover1.jpg",
+        "rating": 4.5
+    },
+    {
+        "id": "2",
+        "name": "Family Rooms",
+        "price": 350,
+        "image": "https://santorinidave.com/wp-content/uploads/2012/09/nyc-central-location-best-luxury-family-room-langham.jpg",
+        "rating": 4.5
+    },
+    {
+        "id": "4",
+        "name": "Single Rooms",
+        "price": 100,
+        "image": "https://setupmyhotel.com/images/Room-Type-Single-Room.jpg",
+        "rating": 4.5
+    },
+    {
+        "id": "5",
+        "name": "Double Family Rooms",
+        "price": 450,
+        "image": "https://2486634c787a971a3554-d983ce57e4c84901daded0f67d5a004f.ssl.cf1.rackcdn.com/hotel-hayden-nyc/media/hayden-room-superiordouble-01-5c49f7f241f92.jpg",
+        "rating": 4.5
+    }
+]

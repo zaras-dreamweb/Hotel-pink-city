@@ -1,0 +1,9 @@
+.btn-btn {
+    background-color: rgb(212, 31, 130);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    bottom: 0;
+}
